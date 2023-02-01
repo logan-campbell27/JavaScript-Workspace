@@ -1,0 +1,16 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "Hello World project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "debug": "nodemon --inspect ./index.js --exec babel-node -e js"
+  },
+  "author": "Logan Campbell",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  }
+}
