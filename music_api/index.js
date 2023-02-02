@@ -56,7 +56,6 @@ app.post('/newalbum', function(req,res){
     console.log('creating new album');
 
     const album = new Album(Number(req.body.id), req.body.title, req.body.desc, Number(req.body.year), req.body.tracks);
-    console.log(JSON.parse(album));
     let dao = new MusicDAO(dbHost, dbPort, dbUsername, dbPassword);
     dao.create(album, function(albumId){
         res.json(albumId);

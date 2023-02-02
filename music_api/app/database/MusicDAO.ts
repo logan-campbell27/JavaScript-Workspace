@@ -159,7 +159,7 @@ export class MusicDAO{
                  if(err) throw err
                  connection.query = util.promisify(connection.query);
                  let a = new Album(album.Id,album.Title,album.Description,album.Year,album.Tracks);
-                 let result = await connection.query('INSERT INTO `Album` (`id`, `album_name`, `album_year`, `album_description`, `Artist_id`) VALUES (?,?,?,?,?)',[a.Id],[a.Title],[a.Year],[a.Description],[1]);
+                 let result = await connection.query('INSERT INTO `Album` (`id`, `album_name`, `album_year`, `album_description`, `Artist_id`) VALUES (?,?,?,?,?)',[a.Id, a.Title ,a.Year,a.Description,1]);
                  if(result.affectedRows != 1){
                     callback(-1)
                  }
