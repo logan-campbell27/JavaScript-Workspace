@@ -5,6 +5,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 var bodyParser = require('body-parser')
+app.use(bodyParser.json())
 
 const dbHost = "localhost"
 const dbPort = 3306;
@@ -54,22 +55,28 @@ app.get('/albumsdesc/:albumdesc', function(req,res){
 })
 app.post('/newalbum', function(req,res){
     console.log('creating new album');
-
-    const album = new Album(Number(req.body.id), req.body.title, req.body.desc, Number(req.body.year), req.body.tracks);
+    console.log(JSON.parse(req.body.id));
+    console.log(req.body.title);
+    console.log(req.body.description);
+    console.log(req.body.year);
+    console.log(req.body.tracks);
+    var album = new Album(JSON.parse(req.body.id), req.body.title, req.body.description, req.body.year, req.body.tracks);
+    console.log(album);
     let dao = new MusicDAO(dbHost, dbPort, dbUsername, dbPassword);
     dao.create(album, function(albumId){
         res.json(albumId);
-        console.log('Album deleted');
+        console.log('Album created');
     });
 })
 app.put('/editalbum/:albumId',function(req,res){
     console.log('updating album');
-    const a = new Album(Number(req.params.albumId), req.params.title, req.params.year, req.params.desc, null);
+    var a = new Album(JSON.parse(req.body.id), req.body.title, req.body.description,req.body.year, null);
+    console.log(a);
     let dao = new MusicDAO(dbHost, dbPort, dbUsername, dbPassword);
-    dao.update(a, function(rowsChanged){
-        res.json(rowsChanged);
+    dao.update(a, function(response){
+        res.json(response);
         console.log('updated');
-    })
+    });
 })
 app.delete('/deletealbum/:albumId',function(req,res){
     console.log('deleting album');

@@ -155,7 +155,7 @@ export class MusicDAO{
     public create(album:Album, callback: any){
 
         this.pool.getConnection(async function(err: any, connection: any){
-                 connection.release();
+                 //connection.release();
                  if(err) throw err
                  connection.query = util.promisify(connection.query);
                  let a = new Album(album.Id,album.Title,album.Description,album.Year,album.Tracks);
@@ -171,10 +171,13 @@ export class MusicDAO{
     public update(album:Album, callback: any){
 
         this.pool.getConnection(async function(err: any, connection: any){
-            connection.release();
+            //connection.release();
             if(err) throw err
             connection.query = util.promisify(connection.query);
-            let result = await connection.query('UPDATE ALBUM SET album_name=?, album_year=?, album_description=? WHERE ID=?',[album.Title],[album.Year],[album.Description],[album.Id]);
+            let result = await connection.query('UPDATE ALBUM SET `album_name`=?, `album_year`=?, `album_description`=? WHERE ID=?',[album.Title,album.Year,album.Description, album.Id]);
+            if(result.affectedRows !=  1){
+                callback(-1)
+            }
             callback(result);
 
         });
