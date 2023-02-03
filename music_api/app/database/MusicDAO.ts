@@ -137,7 +137,8 @@ export class MusicDAO{
             connection.release();
             if(err) throw err
             connection.query = util.promisify(connection.query);
-            let result = await connection.query('SELECT * FROM ALBUM WHERE ALBUM_DESCRIPTION LIKE \'%?%\' ', [search]);
+            
+            let result = await connection.query('SELECT * FROM ALBUM WHERE ALBUM_DESCRIPTION LIKE ?', [search]);
             for(let x=0; x<result.length; ++x){
                 let albumId = result[x].id;
                 let tracks: Track[] = [];
