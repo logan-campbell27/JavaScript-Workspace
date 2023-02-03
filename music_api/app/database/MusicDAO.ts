@@ -5,7 +5,6 @@ import { Track } from "../models/Track";
 import * as mysql from "mysql";
 
 import * as util from "util";
-import SqlString from "mysql/lib/protocol/SqlString";
 import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
 
 export class MusicDAO{
