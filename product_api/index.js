@@ -62,7 +62,7 @@ app.put('/editproduct',function(req,res){
 })
 app.delete('/deleteproduct/:productId',function(req,res){
     console.log('deleting product');
-    let dao = new MusicDAO(dbHost, dbPort, dbUsername, dbPassword);
+    let dao = new ProductDAO(dbHost, dbPort, dbUsername, dbPassword);
     dao.delete(req.params.productId, function(rowsChanged){
         res.json(rowsChanged);
         console.log('deleted');

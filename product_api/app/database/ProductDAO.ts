@@ -115,7 +115,7 @@ export class ProductDAO{
             connection.release();
             if(err) throw err
             connection.query = util.promisify(connection.query);
-            let result = await connection.query('DELETE FROM PRODUCT WHERE ID=?',[productId]);
+            let result = await connection.query('DELETE FROM PRODUCTS WHERE ID=?',[productId]);
             callback(result);
         });
     }
