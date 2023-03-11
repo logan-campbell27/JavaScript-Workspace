@@ -1,0 +1,176 @@
+[
+  {
+      "id": 1,
+      "title": "Revolver",
+      "description": "",
+      "artist":"The Beatles",
+      "year": 1966,
+      "tracks": [
+          {
+              "id": 1,
+              "number": 1,
+              "title": "Taxman",
+              "lyrics": ""
+          },
+          {
+              "id": 2,
+              "number": 2,
+              "title": "Eleanor Rigby",
+              "lyrics": ""
+          },
+          {
+              "id": 3,
+              "number": 3,
+              "title": "I'm Only Sleeping",
+              "lyrics": ""
+          },
+          {
+              "id": 4,
+              "number": 4,
+              "title": "Love You To",
+              "lyrics": ""
+          },
+          {
+              "id": 5,
+              "number": 5,
+              "title": "Here, There and Everywhere",
+              "lyrics": ""
+          },
+          {
+              "id": 6,
+              "number": 6,
+              "title": "Yellow Submarine",
+              "lyrics": ""
+          },
+          {
+              "id": 7,
+              "number": 7,
+              "title": "She Said She Said",
+              "lyrics": ""
+          },
+          {
+              "id": 8,
+              "number": 8,
+              "title": "Good Day Sunshine",
+              "lyrics": ""
+          },
+          {
+              "id": 9,
+              "number": 9,
+              "title": "And Your Bird Can Sing",
+              "lyrics": ""
+          },
+          {
+              "id": 10,
+              "number": 10,
+              "title": "For No One",
+              "lyrics": ""
+          },
+          {
+              "id": 11,
+              "number": 11,
+              "title": "Doctor Robert",
+              "lyrics": ""
+          },
+          {
+              "id": 12,
+              "number": 12,
+              "title": "I Want to Tell You",
+              "lyrics": ""
+          },
+          {
+              "id": 13,
+              "number": 13,
+              "title": "Got to Get You into My Life",
+              "lyrics": ""
+          },
+          {
+              "id": 14,
+              "number": 14,
+              "title": "Tomorrow Never Knows",
+              "lyrics": ""
+          }
+      ]
+  },
+  {
+      "id": 3,
+      "title": "Rubber Soul",
+      "description": "My 2nd favorite Beatles Album",
+      "artist": "The Beatles",
+      "year": 1965,
+      "tracks": [
+          {
+              "id": 27,
+              "number": 1,
+              "title": "I've Just Seen a Face",
+              "lyrics": ""
+          },
+          {
+              "id": 28,
+              "number": 2,
+              "title": "Norwegian Wood (This Bird Has Flown)",
+              "lyrics": ""
+          },
+          {
+              "id": 29,
+              "number": 3,
+              "title": "You Won't See Me",
+              "lyrics": ""
+          },
+          {
+              "id": 30,
+              "number": 4,
+              "title": "Think for Yourself",
+              "lyrics": ""
+          },
+          {
+              "id": 31,
+              "number": 5,
+              "title": "The Word",
+              "lyrics": ""
+          },
+          {
+              "id": 32,
+              "number": 6,
+              "title": "Michelle",
+              "lyrics": ""
+          },
+          {
+              "id": 33,
+              "number": 7,
+              "title": "It's Only Love",
+              "lyrics": ""
+          },
+          {
+              "id": 34,
+              "number": 8,
+              "title": "Girl",
+              "lyrics": ""
+          },
+          {
+              "id": 35,
+              "number": 9,
+              "title": "I'm Looking Through You",
+              "lyrics": ""
+          },
+          {
+              "id": 36,
+              "number": 10,
+              "title": "In My Life",
+              "lyrics": ""
+          },
+          {
+              "id": 37,
+              "number": 11,
+              "title": "Wait",
+              "lyrics": ""
+          },
+          {
+              "id": 38,
+              "number": 12,
+              "title": "Run for Your Life",
+              "lyrics": ""
+          }
+      ]
+  }
+]

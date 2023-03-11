@@ -1,0 +1,7 @@
+<div class="list-group" *ngIf="selectedArtist.id == -1" >
+  <button class="list-group-item" active
+  *ngFor="let artist of artists"
+  (click)="onSelectArtist(artist)">
+  {{artist.name}}
+</button>
+</div>

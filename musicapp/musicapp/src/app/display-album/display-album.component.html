@@ -1,0 +1,26 @@
+<div align="center">
+  <div class="card mb-6" style="max-width: 500px;">
+    <div class="row no-gutters">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{album?.Title}}</h5>
+          <p class="card-text">{{album?.Description}}</p>
+          <p class="card-text"><small class="text-muted">{{album?.Year}}</small></p>
+          <table>
+            <tr>
+              <td width="50px" align="center">
+                <a href="#" data-toggle="collapse" data-target="#collapseTracks" aria-expanded="false"></a>
+              </td>
+              <td width="50px" align="center">
+                <a [routerLink]="['/edit', album]"><i class="fa fa-edit"></i></a>
+              </td>
+              <td width="50px" align="center">
+                <a [routerLink]="['/delete', album?.Id]"><i class="fa fa-trash"></i></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

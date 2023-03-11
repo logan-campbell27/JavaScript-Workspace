@@ -1,0 +1,26 @@
+<form [formGroup]="appForm" (ngSubmit)="onSubmit(appForm.value)">
+  <div class="form-group">
+    <label for="num1">
+      Number 1:
+    </label>
+    <input id="num1" type="number" formControlName="num1" value=0>
+  </div>
+
+  <div class="form-group">
+    <label for="num2">
+      Number 2:
+    </label>
+    <input id="num2" type="number" formControlName="num2" value=0>
+  </div>
+  <div class="form-group">
+    <label for="operand">
+      Enter operand(+,-,*,/)
+    </label>
+    <input id="operand" type="text" formControlName="operand">
+  </div>
+
+  <br>
+  <button class="btn btn-success" type="submit">calculate</button>
+
+</form>
+<label *ngIf="completedop!=0">Result: {{completedop}}</label>
