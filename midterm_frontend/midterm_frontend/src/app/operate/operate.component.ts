@@ -22,6 +22,7 @@ export class OperateComponent {
     num2: new FormControl(0),
     operand: new FormControl('')
   });
+
   onSubmit(data: Partial<{num1: number | null; num2: number | null; operand: string | null}>){
     console.log("Form submitted");
     this.num1 = (data.num1 as number);
